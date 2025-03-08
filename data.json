@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "test-doc",
+    "title": "Шаблон 1",
+    "content": "Просто текст.",
+    "isPublished": "false"
+  },
+  {
+    "slug": "second-doc",
+    "title": "Бизнесс шаблон",
+    "content": "Просто текст.",
+    "isPublished": "true"
+  }
+]
