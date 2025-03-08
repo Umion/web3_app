@@ -69,7 +69,9 @@ export default async function Home() {
               <TableCell>{new Date(d.createdAt).toISOString()}</TableCell>
               <TableCell>{d.slug}</TableCell>
               <TableCell>
-                <Link href={`/documents/${d.slug}`}>Edit</Link>
+                <Link href={`/documents/${d.slug}`} prefetch={false}>
+                  Edit
+                </Link>
               </TableCell>
             </TableRow>
           ))}
