@@ -1,5 +1,5 @@
 // src/app/documents/[slug]/page.js
-import { prisma } from "../../../db/db"; // Подключаем Prisma
+import { prisma } from "@/db/db"; // Подключаем Prisma
 import { notFound } from "next/navigation"; // Для возврата 404, если документ не найден
 
 // Асинхронный компонент для страницы документа
