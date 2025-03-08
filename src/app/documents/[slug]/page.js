@@ -3,7 +3,7 @@ import { prisma } from "../../../db/db"; // Подключаем Prisma
 import { notFound } from "next/navigation"; // Для возврата 404, если документ не найден
 
 // Асинхронный компонент для страницы документа
-export default async function DocumentPage() {
+export default async function DocumentPage({ params }) {
   try {
     const { slug } = await params; // Получаем слаг из URL
     console.log("SERvR Log", slug);
