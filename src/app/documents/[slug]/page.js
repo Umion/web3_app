@@ -13,7 +13,7 @@ export default async function DocumentPage({ params }) {
     }
 
     // Запрашиваем документ по слагу из базы данных
-    const document = await prisma.document.findUnique({
+    const document = await prisma.document.findFirst({
       where: { slug },
     });
 
