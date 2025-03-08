@@ -3,7 +3,7 @@
 // import { notFound } from "next/navigation"; // Для возврата 404, если документ не найден
 
 // Асинхронный компонент для страницы документа
-export default async function DocumentPage({ params }) {
+export default async function DocumentPage() {
   return <h1>DocumentPage</h1>;
   // try {
   //   const { slug } = await params; // Получаем слаг из URL
