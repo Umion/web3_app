@@ -6,6 +6,11 @@ import { notFound } from "next/navigation"; // Для возврата 404, ес
 export default async function DocumentPage({ params }) {
   try {
     const { slug } = await params; // Получаем слаг из URL
+    console.log("SERvR Log", slug);
+
+    if (!slug) {
+      <h1>Ошибка сервера no slug</h1>;
+    }
 
     // Запрашиваем документ по слагу из базы данных
     const document = await prisma.document.findUnique({
