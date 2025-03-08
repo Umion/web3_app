@@ -5,7 +5,7 @@ const Form = () => {
   const [isLoading, setIsLoading] = useState(false);
   const createUser = async () => {
     setIsLoading(true);
-    const res = await fetch("http://localhost:3000/api/register", {
+    const res = await fetch("/api/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -19,12 +19,12 @@ const Form = () => {
   };
   const createDoc = async () => {
     setIsLoading(true);
-    const res = await fetch("http://localhost:3000/api/documents", {
+    const res = await fetch("/api/documents", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        title: "My New Document 22",
-        content: "This is the content of the new document. 33",
+        title: `Document ${Math.random()}`,
+        content: `This is the content of the new document. ${Math.random()}`,
         userId: "21880bfb-dc79-4670-8ed5-26f80b8b9d17",
         slug: "my-new-document-2",
         isPublished: false,
